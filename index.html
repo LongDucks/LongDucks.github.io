@@ -8,30 +8,176 @@ body {
 }
 
 body{
-  background:red;
+  margin: 0;
 }
 
-/* customizable snowflake styling */
-.snowflake {
-  color: #fff;
-  font-size: 1em;
-  font-family: Arial;
-  text-shadow: 0 0 1px #000;
+#app{
+  height: 100vh;
+  width: 100vw;
+
 }
 
-@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
-/* Demo Purpose Only*/
-.demo {
-  font-family: 'Raleway', sans-serif;
-	color:#fff;
-    display: block;
-    margin: 0 auto;
-    padding: 15px 0;
-    text-align: center;
+.container {
+  top: 0;
+  background: #fff;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
 }
-.demo a{
-  font-family: 'Raleway', sans-serif;
-color: #000;		
+
+.loader {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.loader span {
+  width: 128px;
+  height: 128px;
+  /*   margin: -280px 40px 54px  -34px; */
+  background: url("https://static.wikia.nocookie.net/disneyfanon/images/8/8f/BlueyArtwork04.png/revision/latest?cb=20220205151110");
+  opacity: 0;
+  -webkit-animation: loader 10s infinite linear;
+  -moz-animation: loader 10s infinite linear;
+  animation: loader 10s infinite linear;
+}
+
+.loader span:nth-child(5n+5) {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.loader span:nth-child(3n+2) {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.loader span:nth-child(2n+5) {
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+.loader span:nth-child(3n+10) {
+  -webkit-animation-delay: 2.7s;
+  -moz-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+
+.loader span:nth-child(7n+2) {
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.loader span:nth-child(4n+5) {
+  -webkit-animation-delay: 5.5s;
+  -moz-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+}
+
+.loader span:nth-child(3n+7) {
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  animation-delay: 8s;
+}
+
+@keyframes loader {
+  0% {
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+
+    -webkit-transform: translate(0, 0vh) rotateZ(0deg);
+  }
+  25% {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+
+    -webkit-transform: translate(0, 25vh) rotateZ(90deg);
+  }
+  75% {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+
+    -webkit-transform: translate(5vw, 75vh) rotateZ(270deg);
+  }
+  100% {
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+
+    -webkit-transform: translate(10vw, 100vh) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+
+    -webkit-transform: translate(0, 0vh) rotateZ(0deg);
+  }
+  25% {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+
+    -webkit-transform: translate(0, 25vh) rotateZ(90deg);
+  }
+  75% {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+
+    -webkit-transform: translate(5vw, 75vh) rotateZ(270deg);
+  }
+  100% {
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+
+    -webkit-transform: translate(10vw, 100vh) rotateZ(360deg);
+  }
+}
+
+@-moz-keyframes loader {
+  0% {
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+
+    -webkit-transform: translate(0, 0vh) rotateZ(0deg);
+  }
+  25% {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+
+    -webkit-transform: translate(0, 25vh) rotateZ(90deg);
+  }
+  75% {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+
+    -webkit-transform: translate(5vw, 75vh) rotateZ(270deg);
+  }
+  100% {
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+
+    -webkit-transform: translate(10vw, 100vh) rotateZ(360deg);
+  }
 }
 
 div.title {
@@ -85,41 +231,43 @@ div.body {
 <div class="title"> Long Division </div>
 <div class="body"> method for dividing large numbers by hand </div>
 
-<div class="snowflakes" aria-hidden="true">
-  <div class="intro"> Find 250+ Ready to use demo at <a href="https://codeconvey.com">Codeconvey.com</a></div>
-  <div class="snowflake">
-  ❅
-  </div>
-  <div class="snowflake">
-  ❅
-  </div>
-  <div class="snowflake">
-  ❆
-  </div>
-  <div class="snowflake">
-  ❄
-  </div>
-  <div class="snowflake">
-  ❅
-  </div>
-  <div class="snowflake">
-  ❆
-  </div>
-  <div class="snowflake">
-  ❄
-  </div>
-  <div class="snowflake">
-  ❅
-  </div>
-  <div class="snowflake">
-  ❆
-  </div>
-  <div class="snowflake">
-  ❄
-  </div>
+<div id="app">
+  <falling/>
 </div>
 
+<template id="falling">
+  <div class="container">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </template>
 
+
+    <script> 
+    Vue.component('falling', {
+  template: "#falling",
+})
+
+new Vue({
+  el: '#app',
+  data() {
+    return {
+    }
+  },
+  computed:{},
+  methods:{}
+});
+
+
+    </script>
 
 </body>
 </html>
