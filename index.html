@@ -7,6 +7,15 @@ body {
   background-image: url("https://m.media-amazon.com/images/I/51R3pwZ8KbL._AC_SR263,263_QL70_.jpg");
 }
 
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(red, white);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px blue);
+}
+
 div.title {
   width: 400px;
   height: 5px;
@@ -57,6 +66,8 @@ div.body {
 
 <div class="title"> Long Division </div>
 <div class="body"> method for dividing large numbers by hand </div>
+<div id="snow" count="200"></div>
+
 
 
 </body>
