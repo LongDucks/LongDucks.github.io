@@ -2,181 +2,20 @@
 <html>
 <head>
 <style> 
-
-
-body{
-  margin: 0;
+div {
+  width: 100px;
+  height: 100px;
+  background:url("https://ih1.redbubble.net/image.1021709043.9320/flat,128x128,075,t.jpg");
+  background-size: contain;
+  position: relative;
+  animation-name: example;
+  animation-duration: 100s;  
+  animation-fill-mode: forwards;
 }
 
-#app{
-  height: 100vh;
-  width: 100vw;
-
-}
-
-.container {
-  top: 0;
-  background: #fff;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  overflow: hidden;
-}
-
-.loader {
-  /* hi*/
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-
-.loader span {
-  width: 1208px;
-  height: 1208px;
-  /*   margin: -280px 40px 54px  -34px; */
-  background: url("https://static.wikia.nocookie.net/disneyfanon/images/8/8f/BlueyArtwork04.png/revision/latest?cb=20220205151110");
-  opacity: 0;
-  -webkit-animation: loader 10s infinite linear;
-  -moz-animation: loader 10s infinite linear;
-  animation: loader 10s infinite linear;
-}
-
-.loader span:nth-child(5n+5) {
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  animation-delay: 1.3s;
-}
-
-.loader span:nth-child(3n+2) {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-}
-
-.loader span:nth-child(2n+5) {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay: 1.7s;
-  animation-delay: 1.7s;
-}
-
-.loader span:nth-child(3n+10) {
-  -webkit-animation-delay: 2.7s;
-  -moz-animation-delay: 2.7s;
-  animation-delay: 2.7s;
-}
-
-.loader span:nth-child(7n+2) {
-  -webkit-animation-delay: 3.5s;
-  -moz-animation-delay: 3.5s;
-  animation-delay: 3.5s;
-}
-
-.loader span:nth-child(4n+5) {
-  -webkit-animation-delay: 5.5s;
-  -moz-animation-delay: 5.5s;
-  animation-delay: 5.5s;
-}
-
-.loader span:nth-child(3n+7) {
-  -webkit-animation-delay: 8s;
-  -moz-animation-delay: 8s;
-  animation-delay: 8s;
-}
-
-@keyframes loader {
-  0% {
-    width: 128px;
-    height: 128px;
-    opacity: 0;
-
-    -webkit-transform: translate(0, 0vh) rotateZ(0deg);
-  }
-  25% {
-    width: 128px;
-    height: 128px;
-    opacity: 1;
-
-    -webkit-transform: translate(0, 25vh) rotateZ(90deg);
-  }
-  75% {
-    width: 128px;
-    height: 128px;
-    opacity: 1;
-
-    -webkit-transform: translate(5vw, 75vh) rotateZ(270deg);
-  }
-  100% {
-    width: 128px;
-    height: 128px;
-    opacity: 0;
-
-    -webkit-transform: translate(10vw, 100vh) rotateZ(360deg);
-  }
-}
-
-@-webkit-keyframes loader {
-  0% {
-    width: 128px;
-    height: 128px;
-    opacity: 0;
-
-    -webkit-transform: translate(0, 0vh) rotateZ(0deg);
-  }
-  25% {
-    width: 128px;
-    height: 128px;
-    opacity: 1;
-
-    -webkit-transform: translate(0, 25vh) rotateZ(90deg);
-  }
-  75% {
-    width: 128px;
-    height: 128px;
-    opacity: 1;
-
-    -webkit-transform: translate(5vw, 75vh) rotateZ(270deg);
-  }
-  100% {
-    width: 128px;
-    height: 128px;
-    opacity: 0;
-
-    -webkit-transform: translate(10vw, 100vh) rotateZ(360deg);
-  }
-}
-
-@-moz-keyframes loader {
-  0% {
-    width: 128px;
-    height: 128px;
-    opacity: 0;
-
-    -webkit-transform: translate(0, 0vh) rotateZ(0deg);
-  }
-  25% {
-    width: 128px;
-    height: 128px;
-    opacity: 1;
-
-    -webkit-transform: translate(0, 25vh) rotateZ(90deg);
-  }
-  75% {
-    width: 128px;
-    height: 128px;
-    opacity: 1;
-
-    -webkit-transform: translate(5vw, 75vh) rotateZ(270deg);
-  }
-  100% {
-    width: 128px;
-    height: 128px;
-    opacity: 0;
-
-    -webkit-transform: translate(10vw, 100vh) rotateZ(360deg);
-  }
+@keyframes example {
+  from {top: 0px;}
+  to {top: 20000px; background-color: blue;}
 }
 
 div.title {
@@ -230,43 +69,7 @@ div.body {
 <div class="title"> Long Division </div>
 <div class="body"> method for dividing large numbers by hand </div>
 
-<div id="app">
-  <falling/>
-</div>
-
-<template id="falling">
-  <div class="container">
-    <div class="loader">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    </template>
-
-
-    <script> 
-    Vue.component('falling', {
-  template: "#falling",
-})
-
-new Vue({
-  el: '#app',
-  data() {
-    return {
-    }
-  },
-  computed:{},
-  methods:{}
-});
-
-
-    </script>
+<div></div>
 
 </body>
 </html>
