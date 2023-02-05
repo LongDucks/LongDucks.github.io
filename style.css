@@ -15,7 +15,6 @@ p {
   justify-content: center;
   align-items: center;
   height: 200px;
-  border: 3px solid green;
 }
 
 .button {
@@ -43,20 +42,28 @@ p {
   to {top: 20000px; background-color: blue;}
 }
 
+head {
+  text-align: center;
+}
+
 div.title {
   width: 400px;
   height: 10px;
   margin: auto;
-  padding: 200px;
+  padding: 170px;
   text-align: center;
   font-weight: 900;
-  animation-name: mymove;
+  /*animation-name: mymove;*/
   background: none;
   background-color: white;
   animation-duration: 3s;
   font-size: 350%;
   font-family: cursive;
 
+}
+
+a {
+  animation-name: duckwalk
 }
 
 div.body {
