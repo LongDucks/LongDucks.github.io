@@ -18,6 +18,52 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   bottom: 0;
   height: inherit;
 }
+div.title {
+  width: 400px;
+  height: 5px;
+  margin: auto;
+  padding: 100px;
+  text-align: center;
+  font-weight: 900;
+  animation-name: mymove;
+  animation-duration: 3s;
+  font-size: 350%;
+  font-family: cursive;
+
+}
+
+div.body {
+  width: 500px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  animation-name: mymove2;
+  animation-duration: 3s;
+  font-size: 120%;
+  font-family: cursive;
+
+}
+
+@keyframes mymove {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+@keyframes mymove2 {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+
+
 </style>
 </head>
 <body>
@@ -41,6 +87,65 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       <p>ANIMATION </p>
     </div>
   </div>
+
+  <!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.title {
+  width: 400px;
+  height: 5px;
+  margin: auto;
+  padding: 100px;
+  text-align: center;
+  font-weight: 900;
+  animation-name: mymove;
+  animation-duration: 3s;
+  font-size: 350%;
+  font-family: cursive;
+
+}
+
+div.body {
+  width: 500px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  animation-name: mymove2;
+  animation-duration: 3s;
+  font-size: 120%;
+  font-family: cursive;
+
+}
+
+@keyframes mymove {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  
+@keyframes mymove2 {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="title"> Long Division </div>
+<div class="body"> method for dividing large numbers by hand </div>
+
+
+</body>
+</html>
 
   <div class="w3-row">
     <div class="w3-twothird w3-container">
